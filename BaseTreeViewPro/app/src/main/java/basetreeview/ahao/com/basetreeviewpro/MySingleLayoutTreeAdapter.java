@@ -1,6 +1,5 @@
 package basetreeview.ahao.com.basetreeviewpro;
 
-import android.support.annotation.Nullable;
 
 import com.ahao.basetreeview.adapter.SingleLayoutTreeAdapter;
 import com.ahao.basetreeview.model.TreeNode;
@@ -11,13 +10,13 @@ import java.util.List;
 
 public class MySingleLayoutTreeAdapter extends SingleLayoutTreeAdapter<File> {
 
-    public MySingleLayoutTreeAdapter(int layoutResId, @Nullable List<TreeNode<File>> dataToBind) {
+    public MySingleLayoutTreeAdapter(int layoutResId, List<TreeNode<File>> dataToBind) {
         super(layoutResId, dataToBind);
     }
 
     @Override
     protected void convert(BaseViewHolder helper, TreeNode<File> item) {
-        super.convert(helper,item);
+        super.convert(helper, item);
         helper.setText(R.id.textView, item.getId() + ":" + item.getData().getName() + " level=" + item.getLevel());
         if (item.isLeaf()) {
             helper.setImageResource(R.id.level_icon, R.drawable.video);
@@ -33,6 +32,6 @@ public class MySingleLayoutTreeAdapter extends SingleLayoutTreeAdapter<File> {
 
     @Override
     protected int getTreeNodeMargin() {
-        return  DpUtil.dip2px(this.mContext, 30);
+        return DpUtil.dip2px(this.mContext, 30);
     }
 }

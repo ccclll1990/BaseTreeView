@@ -1,12 +1,12 @@
 package basetreeview.ahao.com.basetreeviewpro;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ahao.basetreeview.model.TreeNode;
 import com.ahao.basetreeview.util.TreeDataUtils;
@@ -14,17 +14,17 @@ import com.ahao.basetreeview.util.TreeDataUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultiLayoutTreeActivity  extends AppCompatActivity{
+public class MultiLayoutTreeActivity  extends Activity {
 
     RecyclerView recyclerView;
 
     MyMultiLayoutTreeAdapter adapter;
 
-    private List<TreeNode<File>> allData = new ArrayList<>();
+    private final List<TreeNode<File>> allData = new ArrayList<>();
 
-    private List<TreeNode<File>> dataToBind = new ArrayList<>();
+    private final List<TreeNode<File>> dataToBind = new ArrayList<>();
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(  Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_multi_layout_tree);

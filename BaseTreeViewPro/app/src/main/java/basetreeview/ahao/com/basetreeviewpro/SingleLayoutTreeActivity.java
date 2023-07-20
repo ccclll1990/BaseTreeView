@@ -1,12 +1,13 @@
 package basetreeview.ahao.com.basetreeviewpro;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ahao.basetreeview.model.TreeNode;
 import com.ahao.basetreeview.util.TreeDataUtils;
@@ -14,14 +15,14 @@ import com.ahao.basetreeview.util.TreeDataUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SingleLayoutTreeActivity extends AppCompatActivity {
+public class SingleLayoutTreeActivity extends Activity {
 
     private final static String TAG = "TreeActivity";
     RecyclerView recyclerView;
 
     MySingleLayoutTreeAdapter adapter;
 
-    private List<TreeNode<File>> dataToBind = new ArrayList<>();
+    private final List<TreeNode<File>> dataToBind = new ArrayList<>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
