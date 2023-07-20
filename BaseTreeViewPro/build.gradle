@@ -1,7 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-
+        mavenCentral()
+        google()
 //        dl.google.com 域名经常访问不了, 在站长工具查一下域名的IP, 再修改一下host解析即可...
         maven { url "https://maven.aliyun.com/repository/public" }
         maven { url "https://maven.aliyun.com/repository/central" }
@@ -14,9 +15,9 @@ buildscript {
         maven { url "https://maven.aliyun.com/repository/snapshots" }
         maven { url 'https://developer.huawei.com/repo/' }
         maven { url "https://jitpack.io" }
-        mavenCentral()
+
         maven { url 'https://repo1.maven.org/maven2/' }
-//        google()
+
     }
 
     dependencies {
@@ -27,7 +28,8 @@ buildscript {
 
 allprojects {
     repositories {
-
+        mavenCentral()
+        google()
         maven { url "https://maven.aliyun.com/repository/public" }
         maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
@@ -39,12 +41,12 @@ allprojects {
         maven { url "https://maven.aliyun.com/repository/snapshots" }
         maven { url 'https://developer.huawei.com/repo/' }
         maven { url "https://jitpack.io" }
-        mavenCentral()
+
 
         maven { url 'https://repo1.maven.org/maven2/' }
         flatDir {
             dirs 'libs'
         }
-//        google()
+
     }
 }
